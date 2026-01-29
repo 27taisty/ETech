@@ -3,8 +3,10 @@
 import 'package:flutter/material.dart';
 import 'theme/app_theme.dart';
 import 'main_navigation_scaffold.dart';
+import 'pages/loading_page.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -15,8 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'ETech',
-      theme: AppTheme.darkTheme, // Подключаем тему
-      home: const MainNavigationScaffold(),
+      theme: AppTheme.darkTheme,
+      home: const LoadingPage(),
       debugShowCheckedModeBanner: false,
     );
   }
