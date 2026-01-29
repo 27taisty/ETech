@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'theme/app_theme.dart';
-import 'main_navigation_scaffold.dart';
 import 'pages/loading_page.dart';
 
 Future<void> main() async {

@@ -3,6 +3,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import '../main_navigation_scaffold.dart';
+import 'registration_page.dart';
 
 class LoadingPage extends StatefulWidget {
   const LoadingPage({super.key});
@@ -59,7 +60,7 @@ class _LoadingPageState extends State<LoadingPage> {
   void _navigateToMain() {
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (_) => const MainNavigationScaffold()),
+      MaterialPageRoute(builder: (_) => const RegistrationPage()),
     );
   }
 
@@ -83,7 +84,7 @@ class _LoadingPageState extends State<LoadingPage> {
               width: 200,
               child: LinearProgressIndicator(
                 value: _progress,
-                backgroundColor: Colors.grey[300],
+                backgroundColor: Colors.grey[500],
                 color: Theme.of(context).colorScheme.primary,
               ),
             ),
